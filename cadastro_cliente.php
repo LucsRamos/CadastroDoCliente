@@ -11,6 +11,7 @@
 
 </head>
 <body>
+
   <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Cadastro do Cliente</a>
@@ -53,47 +54,61 @@
     </div>
   </nav>
 
-<div class="container">
-<div class="row" style="margin-top: 100px;">
-  <h2>Dados do Cliente</h2>
+  <!-- download -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 
-<div class="row">
-  <div class="col-12">
-    <input type="text" class="form-control" placeholder="Nome do Cliente" aria-label="First name">
-  </div>
-  <div class="col-8 espaço">
-    <input type="text" class="form-control" placeholder="Digite o Endereço" aria-label="Last name">
-  </div>
-  <div class="col-4 espaço">
-    <input type="text" class="form-control" placeholder="Número" aria-label="Last name">
-  </div>
-  <div class="col-5 espaço">
-    <input type="text" class="form-control" placeholder="Cidade" aria-label="Last name">
-  </div>
-  <div class="col-5 espaço">
-    <input type="text" class="form-control" placeholder="Bairro" aria-label="Last name">
-  </div>
-  <div class="col-2 espaço">
-    <input type="text" class="form-control" placeholder="Estado" aria-label="Last name">
-  </div>
-  <div class="col-4 espaço">
-    <input type="text" class="form-control" placeholder="CEP" aria-label="Last name">
-  </div>
-  <div class="col-8 espaço">
-    <input type="text" class="form-control" placeholder="Telefone" aria-label="Last name">
-  </div>
-  <div class="col-6 espaço">
-    <input type="text" class="form-control" placeholder="CPF" aria-label="Last name">
-  </div>
-  <div class="col-6 espaço">
-    <input type="text" class="form-control" placeholder="RG" aria-label="Last name">
-  </div>
-  <div class="col-12 espaço">
-    <input type="text" class="form-control" placeholder="E-mail" aria-label="Last name">
-  </div>
+<form action="insert.php" method="post">
+  <div class="container">
+  <div class="row" style="margin-top: 100px;">
+    <h2>Dados do Cliente</h2>
 
-<div class="col-10 espaço"></div>
-<div class="col-2"><input class="btn btn-danger" type="submit" value="Cadastrar"></div>
+    <div class="row">
+      <div class="col-12">
+        <input type="text" name="nome" class="form-control" placeholder="Nome do Cliente" aria-label="First name">
+      </div>
+      <div class="col-8 espaço">
+        <input type="text" name="endereco" class="form-control" placeholder="Digite o Endereço" aria-label="Last name">
+      </div>
+      <div class="col-4 espaço">
+        <input type="text" name="numero" class="form-control" placeholder="Número" aria-label="Last name">
+      </div>
+      <div class="col-5 espaço">
+        <input type="text" name="cidade" class="form-control" placeholder="Cidade" aria-label="Last name">
+      </div>
+      <div class="col-5 espaço">
+        <input type="text" name="bairro" class="form-control" placeholder="Bairro" aria-label="Last name">
+      </div>
+      <div class="col-2 espaço">
+        <input type="text" name="estado" class="form-control" placeholder="Estado" aria-label="Last name">
+      </div>
+      <div class="col-4 espaço">
+        <input type="text" name="cep" class="form-control" id="cep" placeholder="CEP" aria-label="Last name">
+      </div>
+      <div class="col-8 espaço">
+        <input type="text" name="telefone" class="form-control" id="telefone" placeholder="Telefone" aria-label="Last name">
+      </div>
+      <div class="col-6 espaço">
+        <input type="text" name="cpf" class="form-control" id="cpf" placeholder="CPF" aria-label="Last name">
+      </div>
+      <div class="col-6 espaço">
+        <input type="text" name="rg" id="rg" class="form-control" placeholder="RG" aria-label="Last name">
+      </div>
+      <div class="col-12 espaço">
+        <input type="text" name="email" class="form-control" placeholder="E-mail" aria-label="Last name">
+      </div>
+
+    <div class="col-10 espaço"></div>
+    <div class="col-2"><input class="btn btn-success" type="submit" value="Cadastrar"></div>
 </div>
+</form>
+
+<script type="text/javascript">
+$("#telefone").mask("(00) 00000-0000");
+$("#cep").mask("00000-000");
+$("#rg").mask("00.000.000-0");
+$("#cpf").mask("000.000.000-00");
+</script>
+
 </body>
 </html>
